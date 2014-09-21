@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="http://js.leapmotion.com/leap-0.6.2.min.js"></script>
+        <style type="text/css">
+            div {
+                float:left;
+                height: 200px;
+                width: 300px;
+            }
+            #box1 {
+                background-color: blue;
+            }
+            #box2 {
+                background-color:green;
+            }
+            canvas{border-style:soild;}
+        </style>
+    </head>
+      <body>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <div id="box1"></div>
+      </body>
+      <script type="text/javascript">
+/*
+        var controller = new Leap.Controller({enableGestures: true});
+
+	controller.on('gesture', function (gesture){
+    	console.log(gesture);
+	    if(gesture.type === 'swipe'){
+    	    handleSwipe(gesture);
+	    }
+	});
+
+function handleSwipe (swipe){
+    var startFrameID;
+    if(swipe.state === 'stop'){
+        if (swipe.direction[0] > 0){
+            //this means that the swipe is to the right direction
+            console.log(right);
+        }else{
+            //this means that the swipe is to the left direction
+            console.log(left);
+        }
+    }
+}
+*/
+	var canvas = document.getElementById("canvas");
+	var ctx = canvas.getContext("2d");
+// Setup Leap loop with frame callback function
+
+var controllerOptions = {enableGestures: true};
+
+var action = 0;
+
+Leap.loop(controllerOptions, function(frame) {
+
+  if (frame.gestures.length > 0) {
+    for (var i = 0; i < frame.gestures.length; i++) {
+      var gesture = frame.gestures[i];
+
+      if (gesture.type == "swipe") {
+          //Classify swipe as either horizontal or vertical
+          var isHorizontal = Math.abs(gesture.direction[0]) > Math.abs(gesture.direction[1]);
+          //Classify as right-left or up-down
+          if(isHorizontal){
+              if(gesture.direction[0] > 0){
+                  swipeDirection = "right";
+                  action = 1;
+                  if (action ==1 ){
+	                  return;}
+                else
+                	{console.log(swipeDirection);}
+                  
+              } else {
+                  swipeDirection = "left";
+         //         document.getElementById("box1").style.background = getRandomColor();
+                  console.log(swipeDirection);
+              }
+          } else { //vertical
+              if(gesture.direction[1] > 0){
+                  swipeDirection = "up";
+		//		document.getElementById("box1").style.background = getRandomColor();                  
+                  console.log(swipeDirection);
+              } else {
+                  swipeDirection = "down";
+		//		document.getElementById("box1").style.background = getRandomColor();                  
+                  console.log(swipeDirection);
+              }                  
+          }
+       	 	  	if (action ==1 ){
+	                  document.getElementById("box1").style.background = getRandomColor();
+                  	  console.log(swipeDirection);}
+       			action = 0;
+       
+       }//leap.loop?
+     }
+  }
+
+});
+
+ 		function getRandomColor() {
+            var letters = '0123456789ABCDEF'.split('');
+            var color = '#';
+            for (var i = 0; i < 6; i++ ) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+        return color;
+        }
+        
+
+
+    </script>
+</html>
