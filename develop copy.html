@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="http://js.leapmotion.com/leap-0.6.2.min.js"></script>
+        <style type="text/css">
+            div {
+                float:left;
+                height: 200px;
+                width: 300px;
+            }
+            #box1 {
+                background-color: blue;
+            }
+            #box2 {
+                background-color:green;
+            }
+            canvas{border-style:soild;}
+        </style>
+    </head>
+      <body>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <div id="box1"></div>
+      </body>
+      <script type="text/javascript">
+    	
+    	var my_controller = new Leap.Controller({enableGestures: true});
+
+  		my_controller.on('connect', function()
+  		{
+	    	setInterval(function()
+	    	{
+    	  		var frame = my_controller.frame();
+
+
+				if (frame.gestures.length > 0) 
+				{
+	    			for (var i = 0; i < frame.gestures.length; i++) 
+	    			{
+	      				var gesture = frame.gestures[i];
+
+						if (gesture.type == "swipe") 
+						{
+          				//Classify swipe as either horizontal or vertical
+          					var isHorizontal = Math.abs(gesture.direction[0]) > Math.abs(gesture.direction[1]);
+          				//Classify as right-left or up-down
+          					if(isHorizontal)
+          					{
+              					if(gesture.direction[0] > 0)
+              					{
+                  					swipeDirection = "right";
+				                  	console.log(swipeDirection);
+                  					action = 1;	
+                  					if (action ==1 )
+                  					{
+                						console.log(swipeDirection);
+                						gesture.state = stop;
+	                  				}
+                					else
+                					{console.log(swipeDirection);}
+                  
+              					} 
+              					else 
+              					{
+                  					swipeDirection = "left";                  
+	                  				action = 2;
+    	            				if (action ==2 )
+        	        				{
+				                  		console.log(swipeDirection);
+									} 
+	    //              return;}
+          //      	else
+            //    	{console.log(swipeDirection);}
+         //         document.getElementById("box1").style.background = getRandomColor();
+              //    console.log(swipeDirection);
+              					}
+          					} 
+          					else
+							{//vertical
+					    		if(gesture.direction[1] > 0){
+	                  			swipeDirection = "up";
+                  				action = 3;
+                  				if (action ==3 )
+                  				{
+	        	 					console.log(swipeDirection);
+	                  			}
+                else
+                	{console.log(swipeDirection);}
+		//		document.getElementById("box1").style.background = getRandomColor();                  
+                  console.log(swipeDirection);
+              } else {
+                  swipeDirection = "down";
+                  action = 4;
+                  if (action ==4 ){
+                		console.log(swipeDirection);
+	                 ;}
+                else
+                //	{console.log(swipeDirection);}
+		//		document.getElementById("box1").style.background = getRandomColor();                  
+                 console.log(swipeDirection);
+              }                  
+          }				
+	}, 150);  });//end leap loop
+
+	function getRandomColor() {
+            var letters = '0123456789ABCDEF'.split('');
+            var color = '#';
+            for (var i = 0; i < 6; i++ ) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+        return color;
+        }
+ 		 my_controller.connect();
+    	
+      </script>
+</html>
