@@ -4,6 +4,8 @@ var port = 4000;
 app.listen(port);
 
 
+var yahooFinance = require('yahoo-finance');
+
 
 
 

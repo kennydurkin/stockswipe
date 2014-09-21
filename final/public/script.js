@@ -17,6 +17,15 @@ var initCard = function(ticker){
 }
 
 
+var dropZone_open = document.getElementById("open");
+var dropZone_high = document.getElementById("high");
+var dropZone_marketCap = document.getElementById("marketCap");
+var dropZone_latestPrice = document.getElementById("latestPrice");
+var dropZone_change = document.getElementById("change");
+var dropZone_growth = document.getElementById("growth");
+
+
+
 
 $(document).ready(function(){
 	$(".card").hide();
@@ -60,7 +69,24 @@ $(document).ready(function(){
 
 	});
 
+	yahooFinance.historical({
+  		symbol: 'AAPL',
+  		from: '2014-09-19',
+  		to: '2014-09-19',
+  	// period: 'd'  // 'd' (daily), 'w' (weekly), 'm' (monthly)
+		}, function (err, quotes, url, symbol) {
+  	//
 
+	});
+
+
+	Mousetrap.bind('left', function() {
+		(2); 
+	});
+
+	Mousetrap.bind('right', function() {
+		(2); 
+	});
 
 
 	if(document.keyCode == 32){
