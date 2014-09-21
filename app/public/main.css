@@ -1,7 +1,9 @@
 html, body {
 	margin:0;
 	width:100%;
-	font-family: "Ek Mukta";
+	font-family: "Lato", "Helvetica","sans serif";
+  font-weight:100;
+  letter-spacing: 2px;
 	text-align: center;
 	color:white;
 	padding:0;
@@ -16,57 +18,73 @@ body {
   z-index: 1;
 }
 
-#ticker_container {
-  position:absolute;
-  margin-top:0px;
-  top:0px;
-  z-index:3;
-  display:inline-block;
-  float:left;
-  margin:30px 30px 30px 30px;
+.credit {
+  color:#D6602D;
+
 }
 
-#ticker {
+#body_container {
+  width:100%;
+  max-width: 1200px;
+  height:100%;
+  text-align: center;
 
-  font-size:25px;
-  width:auto;
-  position:absolute;
-  float:left;
+  margin-top:0px;
+  margin-left:auto;
+  margin-right:auto;
+
   display: block;
-  z-index: 4; 
+}
+
+#ticker_container {
+  position:relative;
+  z-index:3;
+  display:inline-block;
+  width:auto;
+  margin:0px auto 30px auto;
+  float:left;
+  text-align: center;
+  padding:0px 13% 0px 13%;
+
+}
+
+#ticker_title {
+
+  font-size:27px;
 
   /* Webkit for Chrome and Safari */
-  -webkit-transform: scale(1, 1); // This is the scale for the normal size of the image.
-  -webkit-transition-duration: 10000ms;
+  -webkit-transform: scale(1, 1); 
+  /* This is the scale for the normal size of the image.*/
+  -webkit-transition-duration: 100ms;
   -webkit-transition-timing-function: ease-out;
  
   /* Webkit for Mozila Firefox */
   -moz-transform: scale(1, 1);
-  -moz-transition-duration: 10000ms;
+  -moz-transition-duration: 100ms;
   -moz-transition-timing-function: ease-out;
  
   /* Webkit for IE( Version: 11, 10 ) */
   -ms-transform: scale(1, 1);
-  -ms-transition-duration: 10000ms;
+  -ms-transition-duration: 100ms;
   -ms-transition-timing-function: ease-out;
 
 }
 
 
-#ticker:hover {
+#ticker_title:hover {
   /* Webkit for Chrome and Safari */
-  -webkit-transform: scale(2, 2); // This is the enlarged size scale of the image.
-  -webkit-transition-duration: 10000ms;
+  -webkit-transform: scale(2, 2);
+  /*This is the enlarged size scale of the image.*/
+  -webkit-transition-duration: 100ms;
   -webkit-transition-timing-function: ease-out;
- 
   /* Webkit for Mozila Firefox */
   -moz-transform: scale(2, 2);
-  -moz-transition-duration: 10000ms;
+  -moz-transition-duration: 100ms;
   -moz-transition-timing-function: ease-out;
  
   /* Webkit for IE( Version: 11, 10 ) */
   -ms-transform: scale(2, 2);
-  -ms-transition-duration: 10000ms;
+  -ms-transition-duration: 100ms;
   -ms-transition-timing-function: ease-out;
 }
 
@@ -84,6 +102,7 @@ body {
 	height:500px;
 	background:#4A4E68;
 
+  opacity:.9;
 
   margin-top:100px;
   margin-left:auto;
@@ -99,4 +118,31 @@ body {
 
   display: inline-block;
 
+}
+
+#card_title {
+  width:100%;
+  height:65px;
+  margin:10px 10px 10px 10px;
+
+}
+
+#stock_ticker {
+  font-size:50px;
+  color:#D6602D;
+  float:left;
+  border-bottom: 1px solid #D6602D;
+}
+
+#card_content {
+
+}
+
+.makeBlur {
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+}
 }
