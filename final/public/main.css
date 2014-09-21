@@ -1,0 +1,274 @@
+html, body {
+	margin:0;
+	width:100%;
+	font-family: "Lato", "Helvetica","sans serif";
+  font-weight:100;
+  letter-spacing: 2px;
+	text-align: center;
+	color:white;
+	padding:0;
+  display: inline-block;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+html {
+	height:100%;
+}
+body {
+	height:0px;
+	/*background:#333647;*/
+
+  
+  background: rgba(51,54,71,1);
+background: -moz-linear-gradient(top, rgba(51,54,71,1) 0%, rgba(65,70,99,1) 45%, rgba(81,89,133,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(51,54,71,1)), color-stop(45%, rgba(65,70,99,1)), color-stop(100%, rgba(81,89,133,1)));
+background: -webkit-linear-gradient(top, rgba(51,54,71,1) 0%, rgba(65,70,99,1) 45%, rgba(81,89,133,1) 100%);
+background: -o-linear-gradient(top, rgba(51,54,71,1) 0%, rgba(65,70,99,1) 45%, rgba(81,89,133,1) 100%);
+background: -ms-linear-gradient(top, rgba(51,54,71,1) 0%, rgba(65,70,99,1) 45%, rgba(81,89,133,1) 100%);
+background: linear-gradient(to bottom, rgba(51,54,71,1) 0%, rgba(65,70,99,1) 45%, rgba(81,89,133,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333647', endColorstr='#515985', GradientType=0 );
+
+
+    z-index: 1;
+}
+
+.credit {
+  color:#D6602D;
+
+}
+
+#body_container {
+  width:100%;
+  max-width: 1200px;
+  height:100%;
+  text-align: center;
+
+  margin-top:0px;
+  margin-left:auto;
+  margin-right:auto;
+
+  display: block;
+}
+
+#ticker_container {
+  position:relative;
+  z-index:3;
+  display:inline-block;
+  width:auto;
+  margin:0px auto 30px auto;
+  float:left;
+  text-align: center;
+  padding:0px 13% 0px 13%;
+
+}
+
+#ticker_title {
+
+  font-size:27px;
+
+  /* Webkit for Chrome and Safari */
+  -webkit-transform: scale(1, 1); 
+  /* This is the scale for the normal size of the image.*/
+  -webkit-transition-duration: 100ms;
+  -webkit-transition-timing-function: ease-out;
+ 
+  /* Webkit for Mozila Firefox */
+  -moz-transform: scale(1, 1);
+  -moz-transition-duration: 100ms;
+  -moz-transition-timing-function: ease-out;
+ 
+  /* Webkit for IE( Version: 11, 10 ) */
+  -ms-transform: scale(1, 1);
+  -ms-transition-duration: 100ms;
+  -ms-transition-timing-function: ease-out;
+
+}
+
+
+#ticker_title:hover {
+  /* Webkit for Chrome and Safari */
+  -webkit-transform: scale(2, 2);
+  /*This is the enlarged size scale of the image.*/
+  -webkit-transition-duration: 100ms;
+  -webkit-transition-timing-function: ease-out;
+  /* Webkit for Mozila Firefox */
+  -moz-transform: scale(2, 2);
+  -moz-transition-duration: 100ms;
+  -moz-transition-timing-function: ease-out;
+ 
+  /* Webkit for IE( Version: 11, 10 ) */
+  -ms-transform: scale(2, 2);
+  -ms-transition-duration: 100ms;
+  -ms-transition-timing-function: ease-out;
+}
+
+#container {
+  position: absolute;
+  margin-top:0px;
+  width:100%;
+  height:700px;
+  float:left;
+}
+
+.card {
+	width:70%;
+  max-width: 450px;
+	height:560px;
+	background:#4A4E68;
+
+  opacity:.9;
+
+  margin-top:100px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:auto;
+
+  position: relative;
+  /* BORDER RADIUS */
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 6px 6px 6px 6px;
+  border-radius: 6px 6px 6px 6px;
+  z-index:6;
+
+  display: inline-block;
+
+}
+
+#card_title {
+  width:100%;
+  height:65px;
+  margin:10px 10px 10px 10px;
+
+}
+
+#stock_ticker {
+  font-size:50px;
+  color:#D6602D;
+  float:left;
+  border-bottom: 1px solid #D6602D;
+}
+
+#card_content {
+
+}
+
+.graph {
+  background:#ffffff;
+  width:100%;
+  height:260px;
+  opacity: .8;
+  -webkit-filter: invert(100%);};
+
+}
+
+#chartIMG {
+  z-index:3;
+  width:100%;
+  height:200px;
+  position: absolute;
+  opacity: .8;
+
+}
+
+#chartIMG img {
+  width:100%;
+  max-width: 450px;
+  opacity: .8;
+}
+
+.capData {
+  width:100%;
+  height:100px;
+  z-index:4;
+  float:left;
+  display: block;
+
+  text-align: center;
+  position:relative;
+
+}
+
+.capData span {
+  text-align: center;
+  margin:15px 15px 0px 45px;
+  position:relative;
+  float:left;
+  font-size: 18px;
+}
+
+#open {
+  font-size:26px;
+  position:relative;
+  text-align: center;
+  float:left;
+  margin:15px 15px 15px 30px;
+}
+
+#high {
+  font-size:26px;
+  position:relative;
+  text-align: center;
+  float:left;
+  margin:15px 15px 15px 30px;
+}
+
+#marketCap {
+  font-size:26px;
+  position:relative;
+  text-align: center;
+  float:left;
+  margin:15px 15px 15px 30px;
+}
+
+.lastPrice {
+  width:100%;
+  height:100px;
+
+  font-size:36px;
+  
+  float:left;
+  display: block;
+
+  position:relative;
+
+  padding:0px 15px 0px 15px;
+}
+
+#latestPrice {
+  position:relative;
+  text-align: center;
+  float:left;
+
+  font-weight:900;
+  color:#D6602D;
+  margin:30px 4% 15px 4%;
+}
+
+#change {
+  position:relative;
+  text-align: center;
+  float:left;
+
+  margin:30px 4% 15px 4%;
+}
+
+#growth {
+  position:relative;
+  float:left;
+
+  margin:30px 4% 15px 4%;
+}
+
+.makeBlur {
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+}
+}
