@@ -1,9 +1,11 @@
 stockswipe
 ==========
 
-# Unhackathon 2014 Visual Design winner!
+## Unhackathon 2014 Visual Design winner!
 
-# STOCKSWIPE!
+![stockswipe](https://raw.githubusercontent.com/aaronsdevera/stockswipe/master/assets/Screen%20Shot%202014-09-21%20at%201.22.46%20PM.png)
+
+
 Using LeapMotion, we created an elegant user experience for browsing stock ticker data.
 ## Dynamically-sized objects
 Ticker names are small to provide you access to all available tickers, but scale to large objects when hovered upon, for easy selection.
