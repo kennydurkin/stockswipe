@@ -7,5 +7,12 @@
         "express": "latest",
         "jade": "latest"
     },
-    "author": "developer"
+    "author": "developer",
+    "subdomain": "stockswipe",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "engines": {
+        "node": "0.10.x"
+    }
 }
