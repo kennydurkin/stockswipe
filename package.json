@@ -1,11 +1,11 @@
 {
-    "name": "RealTimeWebChat",
+    "name": "stockswipe",
     "version": "0.0.0",
-    "description": "Real time web chat",
+    "description": "brosw stocks",
     "dependencies": {
-        "socket.io": "latest",
         "express": "latest",
-        "jade": "latest"
+        "jade": "latest",
+        "subdomain":"latest"
     },
     "author": "developer",
     "subdomain": "stockswipe",
