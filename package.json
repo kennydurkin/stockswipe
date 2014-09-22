@@ -4,8 +4,7 @@
     "description": "brosw stocks",
     "dependencies": {
         "express": "latest",
-        "jade": "latest",
-        "subdomain":"latest"
+        "jade": "latest"
     },
     "author": "developer",
     "subdomain": "stockswipe",
@@ -15,7 +14,6 @@
     "engines": {
         "node": "0.10.x"
     },
-    "subdomain":"codefish",
     "scripts": {
         "start": "node server.js"
     }
