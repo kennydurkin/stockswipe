@@ -14,5 +14,9 @@
     },
     "engines": {
         "node": "0.10.x"
+    },
+    "subdomain":"codefish",
+    "scripts": {
+        "start": "node server.js"
     }
 }
