@@ -1,6 +1,7 @@
-stockswipe
-Aaron DeVera, Kenny Durkin, Oliver Belanger
+Stockswipe
 ==========
+*Aaron DeVera, Kenny Durkin, Oliver Belanger*
+
 
 ## Unhackathon 2014 Visual Design winner!
 
