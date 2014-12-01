@@ -2,6 +2,8 @@ Stockswipe
 ==========
 *Aaron DeVera, Kenny Durkin, Oliver Belanger*
 
+See it live on [my website](http://kennydurkin.info/stockswipe)!
+(Best experienced with LeapMotion)
 
 ## Unhackathon 2014 Visual Design winner!
 
@@ -14,7 +16,4 @@ Ticker names are small to provide you access to all available tickers, but scale
 ## Fluid and seamless design
 We provide an elegant browsing solution, while still being pinpoint-accurate in the data we provide.
 ## Full-stack webapp with Node.js
-We engineered a MEAN-inspired server, making our app totally accessible from the web .
-
-
-[ ![Codeship Status for aaronsdevera/stockswipe](https://www.codeship.io/projects/78077cf0-248e-0132-93e6-7624bba0d230/status)](https://www.codeship.io/projects/36910)
+We engineered a MEAN-inspired server, making our app totally accessible from the web.
