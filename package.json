@@ -1,7 +1,7 @@
 {
     "name": "stockswipe",
     "version": "0.0.0",
-    "description": "brosw stocks",
+    "description": "browse stocks",
     "dependencies": {
         "express": "latest",
         "jade": "latest"
