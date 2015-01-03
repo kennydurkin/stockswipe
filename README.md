@@ -4,7 +4,7 @@ Stockswipe
 
 ## Unhackathon 2014 Visual Design winner!
 
-See it live on [my website](http://kennydurkin.info/stockswipe)!
+See it live on [my website](http://kennydurk.in/stockswipe)!
 (Best experienced with LeapMotion)
 
 ![stockswipe](http://kennydurk.in/res/stockswipe.png)
